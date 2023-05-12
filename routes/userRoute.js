@@ -6,13 +6,13 @@ router.route('/').get(userController.index);
 
 
 router
-    .route('/:userId')
+    .route('/:id')
     .get(userController.singleUser)
 //     .delete(warehouseController.deleteWarehouse)
 //     .put(warehouseController.updateWarehouse);
 
 router
-    .route('/:userId/')
+    .route('/:id/items')
     .get(userController.userItems);
 
 module.exports = router;

@@ -24,7 +24,7 @@ exports.seed = async function (knex) {
     description:" A lovely boat that will bring you joy this weekend!"
     },
     {
-    id:3,
+    id:"8ea3f172-14d2-4c04-8d9e-528547781516",
     user_id:"2922c286-16cd-4d43-ab98-c79f698aeab0",
     title:"Drone",
     price:"$50",
@@ -80,7 +80,7 @@ exports.seed = async function (knex) {
     description:" A lovely skii's that will bring you joy this weekend!"
     },
     {
-    id:10,
+    id:"f3260a1e-0671-466e-8a3d-e49279ea0a1a",
     user_id:"90ac3319-70d1-4a51-b91d-ba6c2464408c",
     title:"Snowboard",
     price:"$150",
@@ -152,7 +152,7 @@ exports.seed = async function (knex) {
     description:" A lovely set of rods that will bring you joy this weekend!"
     },
     {
-    id:19,
+    id:"cd12eee6-135a-4356-8641-c7a4ee1c1116",
     user_id:"89898957-04ba-4bd0-9f5c-a7aea7447963",
     title:"Scuba Gear",
     price:"$50",
