@@ -5,29 +5,14 @@ router.route('/').get(userController.index);
 // router.route('/').post(warehouseController.addWarehouse);
 
 
-// router
-//     .route('/:id')
-//     .get(usersController.singleWarehouse)
+router
+    .route('/:userId')
+    .get(userController.singleUser)
 //     .delete(warehouseController.deleteWarehouse)
 //     .put(warehouseController.updateWarehouse);
 
-// router
-//     .route('/:id/inventories')
-//     .get(warehouseController.warehouseInventories);
+router
+    .route('/:userId/')
+    .get(userController.userItems);
 
 module.exports = router;
-
-// router
-//     .route('/')
-//     .get(warehouseController.index)
-//     .post(warehouseController.addWarehouse);
-
-// router
-//     .route('/:id')
-//     .get(warehouseController.singleWarehouse)
-//     .put(warehouseController.updateWarehouse)
-//     .delete(warehouseController.deleteWarehouse);
-
-// router
-//     .route('/:id/inventories')
-//     .get(warehouseController.warehouseInventories);

@@ -8,7 +8,7 @@ router
 
 router
     .route('/:id')
-    // .get(itemController.singleItem)
+    .get(itemController.singleItem)
 //     .delete(inventoryController.deleteInventory);
 
 module.exports = router;

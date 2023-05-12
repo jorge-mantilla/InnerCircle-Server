@@ -2,8 +2,7 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const PORT = process.env.PORT || 5051;
-// const inventoryRoutes = require('./routes/inventoryRoute');
-// const users = require("./controllers/users");
+
 const itemRoutes = require('./routes/itemRoute');
 const userRoutes = require('./routes/userRoute');
 
