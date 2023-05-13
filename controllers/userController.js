@@ -48,3 +48,26 @@ exports.singleUser = (req, res) => {
       res.status(400).send(`Error retrieving user ${req.params.id} ${err}`)
     );
 };
+
+exports.addUser = (req, res) => {
+  knex("users")
+    .insert(req.body)
+    .returning("id")
+    .then((data) => {
+      // For POST requests we need to respond with 201 and the location of the newly created record
+      const newUserURL = `/users/${data[0]}`;
+      res.status(201).location(newUserURL).send(newUserURL);
+    })
+    .catch((err) => res.status(400).send(`Error creating User ${err}`));
+};
+
+// exports.addUser = (req, res) => {
+//   knex("users")
+//     .insert(req.body)
+//     .then((data) => {
+//       // For POST requests we need to respond with 201 and the location of the newly created record
+//       const newUserURL = `/users/${userId}`;
+//       res.status(201).location(newUserURL).send(newUserURL);
+//     })
+//     .catch((err) => res.status(400).send(`Error creating User ${err}`));
+// };

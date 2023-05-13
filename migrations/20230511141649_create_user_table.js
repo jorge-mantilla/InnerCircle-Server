@@ -4,7 +4,7 @@
  */
 exports.up = function(knex) {
     return knex.schema.createTable('users', (table) => {
-        table.uuid('id').primary();
+        table.uuid('id').defaultTo(null).primary();
         table.string('email').notNullable();
         table.string('user_name').notNullable();
         table.string('image').notNullable();
