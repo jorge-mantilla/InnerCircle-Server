@@ -4,11 +4,12 @@ const itemController = require('../controllers/itemController');
 router
     .route('/')
     .get(itemController.index)
-    // .post(inventoryController.addInventory);
+    .post(itemController.addItem);
 
 router
     .route('/:id')
     .get(itemController.singleItem)
-//     .delete(inventoryController.deleteInventory);
+    .delete(itemController.deleteItem)
+    .put(itemController.updateItem);
 
 module.exports = router;
